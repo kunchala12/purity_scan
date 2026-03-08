@@ -118,5 +118,6 @@ def history(user_id):
     history_data = get_user_history(user_id)
     return jsonify(history_data), 200
 
-if __name__ == '__main__':
-    app.run(debug=True, port=5000)
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port)
