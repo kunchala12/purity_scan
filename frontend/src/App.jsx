@@ -110,7 +110,7 @@ const Dashboard = () => {
 
   const fetchHistory = async () => {
     try {
-      const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:5000';
+      const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:10000';
       const res = await fetch(`${apiUrl}/api/history/${user.id}`);
       const data = await res.json();
       setHistory(data);
@@ -174,7 +174,7 @@ const Dashboard = () => {
 
     try {
       console.log("Sending compressed scan request...");
-      const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:5000';
+      const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:10000';
       const res = await fetch(`${apiUrl}/api/scan`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
